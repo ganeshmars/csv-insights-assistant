@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  csv_assistant:
+    build: .
+    container_name: csv_insights_assistant_app
+    ports:
+      - "8501:8501" # Map host port 8501 to container port 8501
+    volumes:
+      - .:/app # Mount current directory to /app in container (for development hot-reloading)
+               # For production, you might remove this volume mount after building the image
+    env_file:
+      - .env     # Load environment variables from .env file
+    restart: unless-stopped

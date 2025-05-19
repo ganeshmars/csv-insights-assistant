@@ -1,0 +1,10 @@
+streamlit
+pandas
+plotly
+python-dotenv
+openai
+langchain
+langchain-openai
+langchain-experimental # For create_csv_agent
+tabulate # Often a dependency for Langchain agents displaying tables
+langgraph
